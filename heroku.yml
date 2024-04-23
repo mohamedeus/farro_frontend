@@ -1,6 +1,8 @@
 build:
   docker:
     web: Dockerfile
+release:
+  command:
+    - echo "Deploying the app"
 run:
   web: npm start
-  
