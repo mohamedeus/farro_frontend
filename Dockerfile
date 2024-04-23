@@ -1,5 +1,5 @@
 # Stage 1: Build the React application
-FROM node:14 AS build
+FROM node:20 AS build
 
 # Set the working directory in the Docker container
 WORKDIR /app
@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install dependencies
-RUN npm install --silent || yarn install --silent
+RUN npm install --silent
 
 # Copy the rest of your app's source code from your host to your image filesystem.
 COPY . .
 
 # Build the React application
-RUN npm run build || yarn build
+RUN npm run build
 
 # Stage 2: Serve the React application from Nginx
 FROM nginx:stable-alpine
