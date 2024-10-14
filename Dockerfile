@@ -11,5 +11,6 @@ FROM node:20
 WORKDIR /app
 COPY --from=build /app/build ./build
 COPY server.js .
-RUN npm install express
-CMD ["npm", "start"]
+RUN npm install express --production
+EXPOSE 5001
+CMD ["node", "server.js"]
