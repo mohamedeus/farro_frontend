@@ -28,11 +28,13 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.item-form-container {
+  flex-grow: 1;
+  padding-right: 320px; /* Adds space for the news card */
 }
