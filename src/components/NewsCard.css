@@ -1,0 +1,25 @@
+.news-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #fff;
+  }
+  
+  .news-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .news-card-title {
+    font-size: 1.2em;
+    margin: 0.5em 0 0.5em 0;
+  }
+  
+  .news-card-description {
+    font-size: 1em;
+    color: #666;
+  }
+  
