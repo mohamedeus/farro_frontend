@@ -23,6 +23,11 @@ function ItemFormContainer() {
     setRows(updatedRows);
   };
 
+  const handleDeleteRow = (index) => {
+    const updatedRows = rows.filter((_, idx) => idx !== index);
+    setRows(updatedRows);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmittedData(rows);
@@ -35,6 +40,7 @@ function ItemFormContainer() {
         rows={rows} 
         handleAddRow={handleAddRow} 
         handleChange={handleChange} 
+        handleDeleteRow={handleDeleteRow}
         handleSubmit={handleSubmit} 
       />
       {isSubmitted && <SubmittedTable data={submittedData} />}
