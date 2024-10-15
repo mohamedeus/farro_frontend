@@ -1,6 +1,6 @@
 import React from "react";
 
-function ItemForm({ rows, handleAddRow, handleChange, handleSubmit }) {
+function ItemForm({ rows, handleAddRow, handleChange, handleDeleteRow, handleSubmit }) {
   return (
     <form onSubmit={handleSubmit}>
       {rows.map((row, index) => (
@@ -33,6 +33,7 @@ function ItemForm({ rows, handleAddRow, handleChange, handleSubmit }) {
             onChange={(e) => handleChange(index, e)}
             placeholder="Unit of measurement"
           />
+          <button type="button" onClick={() => handleDeleteRow(index)}>-</button>
         </div>
       ))}
       <button type="button" onClick={handleAddRow}>+</button>
